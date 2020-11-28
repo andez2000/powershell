@@ -1,6 +1,6 @@
-#//////////////////////////////////////////////////////////////////////////////
+###############################################################################
 #
-# Filename: Copy Folder.ps1
+# Filename: copy-folder.ps1
 #
 # Purpose:  Copy a specified folder and contents to a new location
 #
@@ -9,9 +9,9 @@
 #   $destinationRoot - the destination folder  
 #
 # Usage:
-#   & '.\Copy Folder.ps1' -sourceRoot C:\src -destinationRoot C:\dest
+#   & '.\copy-folder.ps1' -sourceRoot C:\src -destinationRoot C:\dest
 #
-#//////////////////////////////////////////////////////////////////////////////
+###############################################################################
 param
 (
   [String]$sourceRoot = '',
