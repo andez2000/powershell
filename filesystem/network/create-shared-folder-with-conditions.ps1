@@ -27,8 +27,7 @@ if (Test-Path -LiteralPath $fullFolderPath -PathType Container) {
 
 function CreateHashTablePropertyIfArrayHasValues([hashtable] $hashParams, [string] $paramName, [array] $arrValues) {
     
-    if ($arrValues -ne $null -and $arrValues.Count -ne 0)
-    {
+    if ($arrValues -ne $null -and $arrValues.Count -ne 0) {
         $hashParams[$paramName] = $arrValues
     }
 }
