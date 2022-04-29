@@ -25,7 +25,7 @@ if (Test-Path -LiteralPath $fullFolderPath -PathType Container) {
 # Create Share
 #
 
-function CreateArrayPropertyIfValues([hashtable] $hashParams, [string] $paramName, [array] $arrValues) {
+function CreateHashTablePropertyIfArrayHasValues([hashtable] $hashParams, [string] $paramName, [array] $arrValues) {
     
     if ($arrValues -ne $null -and $arrValues.Count -ne 0)
     {
@@ -47,8 +47,8 @@ if ([bool](Get-WmiObject -Class Win32_Share -Filter "Path='$queryFolder'")) {
         Description    = "Shared Folder for testing report data"
     }
 
-    CreateArrayPropertyIfValues $params "FullAccess" $fullAccess
-    CreateArrayPropertyIfValues $params "ReadAccess" $readAccess
+    CreateHashTablePropertyIfArrayHasValues $params "FullAccess" $fullAccess
+    CreateHashTablePropertyIfArrayHasValues $params "ReadAccess" $readAccess
         
     New-SmbShare @params
 }
