@@ -1,0 +1,1 @@
+get-childitem -filter "venv" -Directory -recurse | foreach { Remove-Item $_.fullname -Force -confirm:$false }
